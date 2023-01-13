@@ -1,6 +1,7 @@
+
 class API {
     static loginUser(body){
-        return fetch(`http://192.168.0.95:8000/auth/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/auth/`, {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -10,7 +11,7 @@ class API {
     }
 
     static registerUser(body){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/users/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/users/`, {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -20,7 +21,7 @@ class API {
     }
 
     static updateAccount(acc_id, body, token){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/accounts/${acc_id}/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/accounts/${acc_id}/`, {
             method: 'PUT',
             headers:{
                 'Content-Type': 'application/json',
@@ -31,7 +32,7 @@ class API {
     }
 
     static getAccounts(token){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/accounts/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/accounts/`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -41,7 +42,7 @@ class API {
     }
 
     static getAccount(acc_id, body, token){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/accounts/${acc_id}/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/accounts/${acc_id}/`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -52,7 +53,7 @@ class API {
     }
 
     static createAccount(body, token){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/accounts/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/accounts/`, {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json',
@@ -63,7 +64,7 @@ class API {
     }
 
     static deleteAccount(acc_id, body, token){
-        return fetch(`http://192.168.0.95:8000/whenuneedmeapi/accounts/${acc_id}/`, {
+        return fetch(`${process.env.REACT_APP_API_URL}/whenuneedmeapi/accounts/${acc_id}/`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',
